@@ -12,9 +12,6 @@ Requires
 * org name on the cli
 * path to clone into (will be created if needed)
 
-
-	./bulkclone yourorg ~/work/clones/yourorg
-
 It will try and detect already-cloned repositories and skip them, so you can run it periodically to fetch fresh repos.
 
 ### Getting a token
@@ -24,6 +21,11 @@ It will try and detect already-cloned repositories and skip them, so you can run
 3. Check the first box (**repo** _Full control of private repositories_)
 4. Store the token somewhere secure (maybe your 1Password or LastPass vault?)
 5. Set the `GITHUB_TOKEN` environment variable
+
+### Running
+
+1. go build -o bulkclone main.go
+2. ./bulkclone yourorg ~/work/clones/yourorg
 
 ### Future improvements
 
